@@ -1,3 +1,16 @@
+<?php
+$filePath = '/rcv_uplinks.json';
+$jsonContent = file_get_contents ( $filePath ) ;
+if ( $jsonContent === false )
+    die ( 'Błąd odczytu pliku.' ) ;
+$locationData = json_decode ( $jsonContent , true ) ;
+if ($locationData === null)
+    die ( 'Błąd dekodowania danych JSON.' ) ;
+foreach ( $locationData as $location )
+    $line_string[] = $location['coordinates'] ;
+$youngestLocation = reset ( $locationData ) ;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,8 +60,14 @@
 
                     //Create a line and add it to the data source.
                     //datasource.add(new atlas.data.Feature(new atlas.data.LineString([[-122.18822, 47.63208],[-122.18204, 47.63196]])));
-                    source.importDataFromUrl ( '/rcv_uplinks.geojson' ) ;
-
+                    datasource.add(new atlas.data.Feature(new atlas.data.LineString(<?php echo json_encode ( $line_string ) ; ?>)));
+                    
+                    // const geojsonFilePath = 'rcv_uplinks.geojson';
+                    // const geojsonString = fs.readFileSync(geojsonFilePath, 'utf8');
+                    // const geojsonFeatures = JSON.parse(geojsonString);
+                    // var lineStringCoordinates = geojsonFeatures.geometry.coordinates;
+                    // console.log (lineStringCoordinates) ;
+                    //var lineString = new atlas.data.LineString(lineStringCoordinates);
 
                     //Add a layers for rendering data.
                     map.layers.add([
