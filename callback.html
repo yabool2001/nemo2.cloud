@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 14 min. 00 s. w lekcja na podstawie filmu Asynchronous JavaScript Course (Async/Await, Promises, Callbacks) https://www.youtube.com/watch?v=ZYb_ZU8LNxs. -->
+    <title>Callback</title>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+<script>
+    
+    // First example with classic function
+    
+    function one ( call_two ) 
+    {
+        console.log ( "step 1" ) ;
+        call_two () ;
+    }
+
+    function two ()
+    {
+        console.log ( "step 2" ) ;
+    }
+    
+    one ( two ) ;
+
+    // Second example with arrow function
+     
+    let third = ( call_fourth ) => 
+    {
+        console.log ( "third" ) ;
+        call_fourth () ; 
+    }
+    
+    let fourth = () => 
+    {
+        console.log ( "fourth" ) ;
+    }
+
+    third ( fourth ) ;
+    
+</script>
+</body>
+</html>

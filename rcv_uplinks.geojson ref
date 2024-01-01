@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generated": 1704127800000,
+    "url": "https://nemo2.cloud/rcv_uplinks.geojson",
+    "title": "nemo 2 space assets locations",
+    "api": "0.0.1",
+    "count": 50
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "messageGuid": "66870f25-9cf2-4046-8e78-bea7ad490706",
+        "deviceGuid": "e7a9e5ea-509f-4864-9373-bd29c8d389f3",
+        "deviceGroupGuid": "2b8312e7-7691-4e3b-8b35-ddea4087a957",
+        "createdDate": "2023-12-31T05:31:37.4665856Z",
+        "receivedDate": "2023-12-31T06:31:37.4665859Z",
+        "latitude": 52.278222,
+        "longitude": 20.809112,
+        "data": "",
+        "messageSize": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20.809112,52.278222]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "messageGuid": "4dad7e76-11bb-4ec0-b544-60039e3308b3",
+        "deviceGuid": "e7a9e5ea-509f-4864-9373-bd29c8d389f3",
+        "deviceGroupGuid": "2b8312e7-7691-4e3b-8b35-ddea4087a957",
+        "createdDate": "2023-12-31T05:31:37.4665856Z",
+        "receivedDate": "2023-12-31T06:31:37.4665859Z",
+        "latitude": 52.278223,
+        "longitude": 20.809113,
+        "data": "",
+        "messageSize": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20.809112,52.278222]
+      }
+    }
+  ]
+}
