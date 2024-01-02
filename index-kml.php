@@ -47,7 +47,7 @@
                 map.layers.add(layer);
 
                 //Read a KML file from a URL or pass in a raw KML string.
-                atlas.io.read('a.kml').then(async r => {
+                atlas.io.read('ANP2307FL0000225.kml').then(async r => {
                     if (r) {
                         
                         //Check to see if there are any icons in the data set that need to be loaded into the map resources.
