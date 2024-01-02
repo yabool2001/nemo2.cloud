@@ -47,20 +47,20 @@
 	</StyleMap>
 	<Style id="s_ylw-pushpin">
 		<IconStyle>
-			<scale>1.1</scale>
+			<scale>1</scale>
 			<Icon>
 				<href>https://nemo2.cloud/res/blue-placemark-icon.png</href>
 			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			
 		</IconStyle>
 	</Style>
 	<Style id="s_ylw-pushpin0">
 		<IconStyle>
-			<scale>1.1</scale>
+			<scale>1</scale>
 			<Icon>
 				<href>https://nemo2.cloud/res/blue-placemark-icon.png</href>
 			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			
 		</IconStyle>
 		<LineStyle>
 			<color>ff00ffff</color>
@@ -71,20 +71,20 @@
 	</Style>
 	<Style id="s_ylw-pushpin_hl">
 		<IconStyle>
-			<scale>1.3</scale>
+			<scale>1</scale>
 			<Icon>
 				<href>https://nemo2.cloud/res/blue-placemark-icon.png</href>
 			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			
 		</IconStyle>
 	</Style>
 	<Style id="s_ylw-pushpin_hl0">
 		<IconStyle>
-			<scale>1.3</scale>
+			<scale>1</scale>
 			<Icon>
 				<href>https://nemo2.cloud/res/blue-placemark-icon.png</href>
 			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			
 		</IconStyle>
 		<LineStyle>
 			<color>ff00ffff</color>
@@ -124,7 +124,7 @@
 			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
-				<coordinates>20.95810844808702,52.24290423943015,0</coordinates>
+				<coordinates>20.954066,52.253885,0</coordinates>
 			</Point>
 			<receivedDate>2023-12-28T16:08:28.4394038Z</receivedDate>
 		</Placemark>
@@ -132,7 +132,7 @@
 			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
-				<coordinates>20.95604794268144,52.23450136153758,0</coordinates>
+				<coordinates>20.955976,52.234491,0</coordinates>
 			</Point>
 			<receivedDate>2023-12-28T15:08:28.4394038Z</receivedDate>
 		</Placemark>
@@ -140,7 +140,7 @@
 			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
-				<coordinates>20.95870556569912,52.22247333077303,0</coordinates>
+				<coordinates>20.960279,52.217575,0</coordinates>
 			</Point>
 			<receivedDate>2023-12-28T14:08:28.4394038Z</receivedDate>
 		</Placemark>
