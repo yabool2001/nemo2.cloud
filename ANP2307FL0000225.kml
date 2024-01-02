@@ -49,7 +49,7 @@
 		<IconStyle>
 			<scale>1.1</scale>
 			<Icon>
-				<href>https://nemo2.cloud/res/320187-200.png</href>
+				<href>https://nemo2.cloud/res/blue-placemark-icon.png</href>
 			</Icon>
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
@@ -58,7 +58,7 @@
 		<IconStyle>
 			<scale>1.1</scale>
 			<Icon>
-				<href>https://nemo2.cloud/res/320187-200.png</href>
+				<href>https://nemo2.cloud/res/blue-placemark-icon.png</href>
 			</Icon>
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
@@ -73,7 +73,7 @@
 		<IconStyle>
 			<scale>1.3</scale>
 			<Icon>
-				<href>https://nemo2.cloud/res/320187-200.png</href>
+				<href>https://nemo2.cloud/res/blue-placemark-icon.png</href>
 			</Icon>
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
@@ -82,7 +82,7 @@
 		<IconStyle>
 			<scale>1.3</scale>
 			<Icon>
-				<href>https://nemo2.cloud/res/320187-200.png</href>
+				<href>https://nemo2.cloud/res/blue-placemark-icon.png</href>
 			</Icon>
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
