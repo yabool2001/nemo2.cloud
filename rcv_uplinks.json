@@ -1,2 +1,137 @@
 [
+    {
+        "messageGuid": "66870f25-9cf2-4046-8e78-bea7ad490723",
+        "deviceGuid": "e7a9e5ea-509f-4864-9373-bd29c8d389f3",
+        "deviceGroupGuid": "2b8312e7-7691-4e3b-8b35-ddea4087a957",
+        "createdDate": "2023-12-31T13:31:37.4665856Z",
+        "receivedDate": "2023-12-31T14:31:37.4665859Z",
+        "latitude": 51.395246,
+        "longitude": 12.429076,
+        "data": "",
+        "messageSize": 0,
+        "coordinates": [
+            12.429076,
+            51.395246
+        ]
+    },
+    {
+        "messageGuid": "66870f25-9cf2-4046-8e78-bea7ad490722",
+        "deviceGuid": "e7a9e5ea-509f-4864-9373-bd29c8d389f3",
+        "deviceGroupGuid": "2b8312e7-7691-4e3b-8b35-ddea4087a957",
+        "createdDate": "2023-12-31T12:31:37.4665856Z",
+        "receivedDate": "2023-12-31T13:31:37.4665859Z",
+        "latitude": 52.223549,
+        "longitude": 11.729997,
+        "data": "",
+        "messageSize": 0,
+        "coordinates": [
+            11.729997,
+            52.223549
+        ]
+    },
+    {
+        "messageGuid": "66870f25-9cf2-4046-8e78-bea7ad490721",
+        "deviceGuid": "e7a9e5ea-509f-4864-9373-bd29c8d389f3",
+        "deviceGroupGuid": "2b8312e7-7691-4e3b-8b35-ddea4087a957",
+        "createdDate": "2023-12-31T11:31:37.4665856Z",
+        "receivedDate": "2023-12-31T12:31:37.4665859Z",
+        "latitude": 52.459702,
+        "longitude": 13.457455,
+        "data": "",
+        "messageSize": 0,
+        "coordinates": [
+            13.457455,
+            52.459702
+        ]
+    },
+    {
+        "messageGuid": "66870f25-9cf2-4046-8e78-bea7ad490720",
+        "deviceGuid": "e7a9e5ea-509f-4864-9373-bd29c8d389f3",
+        "deviceGroupGuid": "2b8312e7-7691-4e3b-8b35-ddea4087a957",
+        "createdDate": "2023-12-31T10:31:37.4665856Z",
+        "receivedDate": "2023-12-31T11:31:37.4665859Z",
+        "latitude": 52.31729,
+        "longitude": 14.589236,
+        "data": "",
+        "messageSize": 0,
+        "coordinates": [
+            14.589236,
+            52.31729
+        ]
+    },
+    {
+        "messageGuid": "66870f25-9cf2-4046-8e78-bea7ad490719",
+        "deviceGuid": "e7a9e5ea-509f-4864-9373-bd29c8d389f3",
+        "deviceGroupGuid": "2b8312e7-7691-4e3b-8b35-ddea4087a957",
+        "createdDate": "2023-12-31T09:31:37.4665856Z",
+        "receivedDate": "2023-12-31T10:31:37.4665859Z",
+        "latitude": 52.415158,
+        "longitude": 16.901281,
+        "data": "",
+        "messageSize": 0,
+        "coordinates": [
+            16.901281,
+            52.415158
+        ]
+    },
+    {
+        "messageGuid": "66870f25-9cf2-4046-8e78-bea7ad490718",
+        "deviceGuid": "e7a9e5ea-509f-4864-9373-bd29c8d389f3",
+        "deviceGroupGuid": "2b8312e7-7691-4e3b-8b35-ddea4087a957",
+        "createdDate": "2023-12-31T08:31:37.4665856Z",
+        "receivedDate": "2023-12-31T09:31:37.4665859Z",
+        "latitude": 52.274316,
+        "longitude": 17.709298,
+        "data": "",
+        "messageSize": 0,
+        "coordinates": [
+            17.709298,
+            52.274316
+        ]
+    },
+    {
+        "messageGuid": "66870f25-9cf2-4046-8e78-bea7ad490717",
+        "deviceGuid": "e7a9e5ea-509f-4864-9373-bd29c8d389f3",
+        "deviceGroupGuid": "2b8312e7-7691-4e3b-8b35-ddea4087a957",
+        "createdDate": "2023-12-31T07:31:37.4665856Z",
+        "receivedDate": "2023-12-31T08:31:37.4665859Z",
+        "latitude": 51.787576,
+        "longitude": 19.445665,
+        "data": "",
+        "messageSize": 0,
+        "coordinates": [
+            19.445665,
+            51.787576
+        ]
+    },
+    {
+        "messageGuid": "66870f25-9cf2-4046-8e78-bea7ad490707",
+        "deviceGuid": "e7a9e5ea-509f-4864-9373-bd29c8d389f3",
+        "deviceGroupGuid": "2b8312e7-7691-4e3b-8b35-ddea4087a957",
+        "createdDate": "2023-12-31T06:31:37.4665856Z",
+        "receivedDate": "2023-12-31T07:31:37.4665859Z",
+        "latitude": 52.091057,
+        "longitude": 20.368534,
+        "data": "",
+        "messageSize": 0,
+        "coordinates": [
+            20.368534,
+            52.091057
+        ]
+    },
+    {
+        "messageGuid": "66870f25-9cf2-4046-8e78-bea7ad490706",
+        "deviceGuid": "e7a9e5ea-509f-4864-9373-bd29c8d389f3",
+        "deviceGroupGuid": "2b8312e7-7691-4e3b-8b35-ddea4087a957",
+        "createdDate": "2023-12-31T05:31:37.4665856Z",
+        "receivedDate": "2023-12-31T06:31:37.4665859Z",
+        "latitude": 52.278222,
+        "longitude": 20.809112,
+        "data": "",
+        "messageSize": 0,
+        "coordinates": [
+            20.809112,
+            52.278222
+        ]
+    }
 ]

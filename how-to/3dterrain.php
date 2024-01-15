@@ -1,5 +1,5 @@
-<!-- Wersja demonstracyjna i NIEdziałająca, opracowana podstawie przykładu Moving dashed line: https://github.com/Azure-Samples/AzureMapsCodeSamples/blob/main/Samples/Animations/Moving%20dashed%20line/Moving%20dashed%20line.html -->
-<!-- Źródłem danych jest plik rcv_uplinks.json -->
+<!-- Wersja działająca opracowana na podstawie przykładu : https://learn.microsoft.com/en-us/azure/azure-maps/how-to-use-map-control -->
+<!-- Źródłem danych jest plik ../rcv_uplinks.json -->
 
 <?php
 
@@ -14,6 +14,7 @@ foreach ( $locationData as $location )
     $line_string[] = $location['coordinates'] ;
 $line_string = array_reverse ( $line_string ) ;
 $youngest_location = reset ( $locationData ) ;
+// echo json_encode ( $youngest_location["coordinates"] ) ;
 
 ?>
 
@@ -41,8 +42,8 @@ $youngest_location = reset ( $locationData ) ;
          function InitMap()
          {
              var map = new atlas.Map('myMap', {
-                 center: [-122.33, 47.6],
-                 zoom: 12,
+                 center: <?php echo json_encode ( $youngest_location["coordinates"] ) ; ?>,
+                 zoom: 5,
                  language: 'en-US',
                  authOptions:
                 {
