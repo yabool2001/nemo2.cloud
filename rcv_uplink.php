@@ -19,9 +19,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // UWAGA!!! NOWY KOD JEST TUTAJ:
+    // Utworzenie nowego elementu coordinates składającego się z long i lat
     if ( isset ( $newObject['longitude'] ) && isset ( $newObject['latitude'] ) )
     {
         $newObject['coordinates'] = array ( (float) $newObject['longitude'] , (float) $newObject['latitude'] ) ;
+    }
+    // Skrócenie czasu poprzez usunięcie milisekund
+    if ( isset ( $newObject['createdDate'] ) )
+    {
+        $newObject['createdDate'] = date ( 'Y-m-d H:i:s' , strtotime ( $newObject['createdDate'] ) ) ;
+    }
+    if ( isset ( $newObject['receivedDate'] ) )
+    {
+        $newObject['receivedDate'] = date ( 'Y-m-d H:i:s' , strtotime ( $newObject['receivedDate'] ) ) ;
     }
 
     // Odczytanie i dekodowanie istniejącej zawartości pliku
