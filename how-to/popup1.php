@@ -15,6 +15,8 @@ foreach ( $locationData as $location )
 $line_string = array_reverse ( $line_string ) ;
 $youngest_location = reset ( $locationData ) ;
 // echo json_encode ( $youngest_location["coordinates"] ) ;
+// echo json_encode ( $locationData[0]["coordinates"] ) ;
+// echo json_encode ( $locationData[0]["deviceGuid"] ) ;
 
 ?>
 
@@ -63,9 +65,9 @@ $youngest_location = reset ( $locationData ) ;
                 var dataSource = new atlas.source.DataSource();
                 map.sources.add(dataSource);
 
-                dataSource.add(new atlas.data.Feature(new atlas.data.Point(<?php echo json_encode ( $line_string[0] ) ; ?>), {
-                    name: 'Microsoft Building 41', 
-                    description: '15571 NE 31st St, Redmond, WA 98052'
+                dataSource.add(new atlas.data.Feature(new atlas.data.Point(<?php echo json_encode ( $locationData[0]["coordinates"] ) ; ?>), {
+                    name: 'deviceGuid: <?php echo json_encode ( $locationData[0]["deviceGuid"] ) ;?>',
+                    description: 'createdDate: <?php echo json_encode ( $locationData[0]["createdDate"] ) ;?>\n\nreceivedDate: <?php echo json_encode ( $locationData[0]["receivedDate"] ) ;?>'
                 }));
 
                 //Create a layer to render point data.
