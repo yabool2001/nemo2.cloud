@@ -75,12 +75,12 @@ $youngest_location = reset ( $locationData ) ;
                 //Create to line shapes for easy updating. A red straightline will be created to show the straight line path between the points.
                 straightLine = new atlas.Shape(new atlas.data.LineString(positions), null, {
                     color: 'red',
-                    width: 2
+                    width: 0
                 });
 
                 spline = new atlas.Shape(new atlas.data.LineString(atlas.math.getCardinalSpline(positions, tension, nodeSize, close)), null, {
                     color: 'blue',
-                    width: 3
+                    width: 2
                 });
 
                 //Add the lines to the data source.
@@ -132,7 +132,8 @@ $youngest_location = reset ( $locationData ) ;
 <body onload="GetMap()">
     <div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
 
-    <div style="position:absolute;top:10px; left:10px;border-radius:10px;background-color:white;">
+    <!-- Odkomentuj poniższy kod, żeby regulować linie ale środkowa regulacja nie działa. Dlatego lepiej nie odblokowywać. -->
+    <!-- <div style="position:absolute;top:10px; left:10px;border-radius:10px;background-color:white;">
         <table>
             <tr>
                 <td>Tension:</td>
@@ -159,7 +160,7 @@ $youngest_location = reset ( $locationData ) ;
                 </td>
             </tr>
         </table>
-    </div>
+    </div> -->
 
     <fieldset style="width:calc(100% - 30px);min-width:290px;margin-top:10px;">
         <legend>Cardinal Spline Options</legend>
