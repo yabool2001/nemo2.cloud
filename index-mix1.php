@@ -116,15 +116,6 @@ $no_of_locations = count ( $locationData ) ;
             });
         }
 
-        function calculateSpline() {
-            //Get the spline options.
-            tension = parseFloat(document.getElementById("tensionSlider").value);
-            nodeSize = parseInt(document.getElementById("nodeSizeSlider").value);
-            close = document.getElementById("closeChbx").checked;
-
-            //Calculate positions for the new cardinal spline options and update the spline coordinates.
-            spline.setCoordinates(atlas.math.getCardinalSpline(positions, tension, nodeSize, close));
-        }
     </script>
     <style type="text/css">
         .dot
@@ -175,37 +166,6 @@ $no_of_locations = count ( $locationData ) ;
 </head>
 <body onload="GetMap()">
     <div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
-
-    <!-- Odkomentuj poniższy kod, żeby regulować linie ale środkowa regulacja nie działa. Dlatego lepiej nie odblokowywać. -->
-    <!-- <div style="position:absolute;top:10px; left:10px;border-radius:10px;background-color:white;">
-        <table>
-            <tr>
-                <td>Tension:</td>
-                <td>
-                    <form oninput="tension.value=tensionSlider.value">
-                        <input type="range" id="tensionSlider" value="0.5" min="-2" max="2" step="0.1" oninput="calculateSpline()" onchange="calculateSpline()" />
-                        <output name="tension" for="tensionSlider">0.5</output>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td>Node Size:</td>
-                <td>
-                    <form oninput="nodeSize.value=nodeSizeSlider.value">
-                        <input type="range" id="nodeSizeSlider" value="30" min="2" max="100" step="1" oninput="calculateSpline()" onchange="calculateSpline()" />
-                        <output name="nodeSize" for="nodeSizeSlider">30</output>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td>Close:</td>
-                <td>
-                    <input id="closeChbx" type="checkbox" onchange="calculateSpline()" />
-                </td>
-            </tr>
-        </table>
-    </div> -->
-
     <fieldset style="width:calc(100% - 30px);min-width:290px;margin-top:10px;">
         <legend>Cardinal Spline Options</legend>
         This sample provides a set of controls to test the various features of the Cardinal Spline calculation. 
