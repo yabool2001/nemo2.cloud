@@ -14,7 +14,10 @@ $locationData = json_decode ( $jsonContent , true ) ;
 if ($locationData === null)
     die ( 'Błąd dekodowania danych JSON.' ) ;
 foreach ( $locationData as $location )
+{
     $line_string[] = $location['coordinates'] ;
+    $createdDate[] = $location['createdDate'] ;
+}
 $line_string = array_reverse ( $line_string ) ;
 $youngest_location = reset ( $locationData ) ;
 $no_of_locations = count ( $locationData ) ;
@@ -50,6 +53,7 @@ $no_of_locations = count ( $locationData ) ;
 
         //Sample positions.
         var positions = <?php echo json_encode ( $line_string ) ; ?>;
+        var createdDate = <?php echo json_encode ( $createdDate ) ; ?>;
 
         function GetMap() {
             //Initialize a map instance.
@@ -70,20 +74,17 @@ $no_of_locations = count ( $locationData ) ;
             //Wait until the map resources are ready.
             map.events.add('ready', function () {
 
-                //Define an HTML template for a custom popup content laypout.
-                var popupTemplate = '<div class="customInfobox"><div class="deviceGuid">{deviceGuid}</div>{createdDate}<br>{receivedDate}</div>';
-
                 //Create a data source and add it to the map.
                 datasource = new atlas.source.DataSource();
                 map.sources.add(datasource);
 
+                //Create a layer to render lines.
+                var line_layer = new atlas.layer.LineLayer(datasource, null, {
+                    strokeColor: ['get', 'color'],
+                    strokeWidth: ['get', 'width']
+                })
                 //Create a layer for visualizing the lines on the map.
-                map.layers.add(
-                    new atlas.layer.LineLayer(datasource, null, {
-                        strokeColor: ['get', 'color'],
-                        strokeWidth: ['get', 'width']
-                    })
-                );
+                map.layers.add( line_layer ) ;
 
                 spline = new atlas.Shape(new atlas.data.LineString(atlas.math.getCardinalSpline(positions, tension, nodeSize, close)), null, {
                     color: 'blue',
