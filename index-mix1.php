@@ -45,7 +45,7 @@ $no_of_locations = count ( $locationData ) ;
     <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/3/atlas.min.js"></script>
 
     <script>
-        var map, datasource, spline, straightLine, tension = 0.5, nodeSize = 30, close = false;
+        var map, datasource, spline, tension = 0.5, nodeSize = 30, close = false;
         var pulse_marker ;
 
         //Sample positions.
@@ -81,7 +81,6 @@ $no_of_locations = count ( $locationData ) ;
                 map.layers.add(
                     new atlas.layer.LineLayer(datasource, null, {
                         strokeColor: ['get', 'color'],
-
                         strokeWidth: ['get', 'width']
                     })
                 );
