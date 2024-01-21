@@ -45,6 +45,7 @@ $no_of_locations = count ( $locationData ) ;
 
     <script>
         var map, datasource, spline, straightLine, tension = 0.5, nodeSize = 30, close = false;
+        var pulse_marker ;
 
         //Sample positions.
         var positions = <?php echo json_encode ( $line_string ) ; ?>;
@@ -93,38 +94,26 @@ $no_of_locations = count ( $locationData ) ;
                 });
 
                 //Add the lines to the data source.
-                datasource.add([straightLine, spline]);
+                datasource.add ( [ straightLine , spline ] ) ;
 
-                //Create a draggable HTML marker for each position.
-                for (var i = 0; i < positions.length; i++) {
-                    var marker = new atlas.HtmlMarker({
-                        draggable: true,
-                        position: positions[i]
-                    });
-
-                    //Store the position index in the marker properties so that we can easily update the cardinal spline as the marker is dragged.
-                    marker.properties = {
-                        index: i
-                    };
+                //Create a non-draggable HTML marker for each position.
+                for ( var i = 0 ; i < positions.length ; i++ ) {
+                    if ( i != positions.length - 1 ) {
+                        var marker = new atlas.HtmlMarker({
+                            draggable: false,
+                            position: positions[i]
+                        });
+                    } else {
+                        var marker = new atlas.HtmlMarker ({
+                            htmlContent: '<div class="pulseIcon"></div>',
+                            position: positions[i]
+                        });
+                    }
 
                     //Add the marker to the map.
-                    map.markers.add(marker);
-
-                    //Create a drag event for the marker.
-                    map.events.add('drag', marker, markerDragged);
+                    map.markers.add ( marker ) ;
                 }
             });
-        }
-
-        function markerDragged(e) {
-            //Update the position the marker represents.
-            positions[e.target.properties.index] = e.target.getOptions().position;
-
-            //Calculate the cardinal spline coordinates and update the spline.
-            spline.setCoordinates(atlas.math.getCardinalSpline(positions, tension, nodeSize, close));
-
-            //Update the lines with the new positions.
-            straightLine.setCoordinates(positions);
         }
 
         function calculateSpline() {
@@ -137,6 +126,43 @@ $no_of_locations = count ( $locationData ) ;
             spline.setCoordinates(atlas.math.getCardinalSpline(positions, tension, nodeSize, close));
         }
     </script>
+    <style type="text/css">
+        .pulseIcon
+        {
+            display: block ;
+            width: 10px ;
+            height: 10px ;
+            border-radius: 50% ;
+            background: orange ;
+            border: 2px solid white ;
+            cursor: pointer ;
+            box-shadow: 0 0 0 rgba( 0 , 204 , 255 , 0.4 ) ;
+            animation: pulse 3s infinite ;
+        }
+
+        .pulseIcon:hover
+        {
+            animation: none ;
+        }
+
+        @keyframes pulse
+        {
+            0%
+            {
+                box-shadow: 0 0 0 0 rgba( 0 , 204 , 255 , 0.4 ) ;
+            }
+
+            70%
+            {
+                box-shadow: 0 0 0 50px rgba( 0 , 204 , 255 , 0 ) ;
+            }
+
+            100%
+            {
+                box-shadow: 0 0 0 0 rgba( 0 , 204 , 255 , 0 ) ;
+            }
+        }
+    </style>
 </head>
 <body onload="GetMap()">
     <div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
