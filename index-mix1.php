@@ -70,6 +70,9 @@ $no_of_locations = count ( $locationData ) ;
             //Wait until the map resources are ready.
             map.events.add('ready', function () {
 
+                //Define an HTML template for a custom popup content laypout.
+                var popupTemplate = '<div class="customInfobox"><div class="deviceGuid">{deviceGuid}</div>{createdDate}<br>{receivedDate}</div>';
+
                 //Create a data source and add it to the map.
                 datasource = new atlas.source.DataSource();
                 map.sources.add(datasource);
@@ -83,19 +86,13 @@ $no_of_locations = count ( $locationData ) ;
                     })
                 );
 
-                //Create to line shapes for easy updating. A red straightline will be created to show the straight line path between the points.
-                straightLine = new atlas.Shape(new atlas.data.LineString(positions), null, {
-                    color: 'red',
-                    width: 0
-                });
-
                 spline = new atlas.Shape(new atlas.data.LineString(atlas.math.getCardinalSpline(positions, tension, nodeSize, close)), null, {
                     color: 'blue',
                     width: 2
                 });
 
                 //Add the lines to the data source.
-                datasource.add ( [ straightLine , spline ] ) ;
+                datasource.add ( [ spline ] ) ;
 
                 // Create a non-draggable HTML marker for each position.
                 // Cancel line: htmlContent: '<div class="dot"></div>', to have standard pin marker
