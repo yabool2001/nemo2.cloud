@@ -1,3 +1,5 @@
+<!-- -->
+<!-- Nie działa, zostawiłem. -->
 <!-- Wersja działająca opracowana na podstawie przykładu: https://learn.microsoft.com/en-us/azure/azure-maps/map-add-popup i https://learn.microsoft.com/en-us/azure/azure-maps/map-add-pin -->
 <!-- Źródłem danych jest plik ../rcv_uplinks.json -->
 
@@ -6,7 +8,7 @@
 <!DOCTYPE html>
  <html>
  <head>
-    <title></title>
+    <title>GeoJSON 1</title>
 
     <meta charset="utf-8">
 
@@ -51,7 +53,7 @@
 
                 /*Create a data source and add it to the map*/
                 var dataSource = new atlas.source.DataSource();
-                map.sources.add([dataSource]);
+                map.sources.add(dataSource);
                 //My code - może dataSource w nawiasach kwadratowych
                 atlas.io.read ( geojson_data_url ).then ( r => {
                     if ( r ) {
