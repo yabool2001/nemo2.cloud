@@ -1,5 +1,6 @@
 <!--  -->
-<!-- Status: Initialization -->
+<!-- Status: Cardinal Spline & Pulse markup integrated -->
+<!-- Developing: Popup integration -->
 <!-- Page that comprises 3 projects: index-cso.php, how-to/popup3.php & index.php (marker pulse animation) -->
 <!-- Data source: rcv_uplinks.json -->
 
@@ -96,10 +97,12 @@ $no_of_locations = count ( $locationData ) ;
                 //Add the lines to the data source.
                 datasource.add ( [ straightLine , spline ] ) ;
 
-                //Create a non-draggable HTML marker for each position.
+                // Create a non-draggable HTML marker for each position.
+                // Cancel line: htmlContent: '<div class="dot"></div>', to have standard pin marker
                 for ( var i = 0 ; i < positions.length ; i++ ) {
                     if ( i != positions.length - 1 ) {
                         var marker = new atlas.HtmlMarker({
+                            htmlContent: '<div class="dot"></div>',
                             draggable: false,
                             position: positions[i]
                         });
@@ -127,7 +130,18 @@ $no_of_locations = count ( $locationData ) ;
         }
     </script>
     <style type="text/css">
-        .pulseIcon
+        .dot
+        {
+            display: block ;
+            width: 10px ;
+            height: 10px ;
+            border-radius: 50% ;
+            background: blue ;
+            border: 2px solid white ;
+            cursor: pointer ;
+            box-shadow: 0 0 0 rgba( 0 , 204 , 255 , 0.4 ) ;
+            animation: none ;
+        }.pulseIcon
         {
             display: block ;
             width: 10px ;
@@ -139,12 +153,10 @@ $no_of_locations = count ( $locationData ) ;
             box-shadow: 0 0 0 rgba( 0 , 204 , 255 , 0.4 ) ;
             animation: pulse 3s infinite ;
         }
-
         .pulseIcon:hover
         {
             animation: none ;
         }
-
         @keyframes pulse
         {
             0%
