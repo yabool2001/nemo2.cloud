@@ -50,6 +50,7 @@ $no_of_locations = count ( $locationData ) ;
     <script>
         var map, datasource, spline, tension = 0.5, nodeSize = 30, close = false;
         var pulse_marker ;
+        var json_data ;
 
         //Sample positions.
         var positions = <?php echo json_encode ( $line_string ) ; ?>;
@@ -113,6 +114,7 @@ $no_of_locations = count ( $locationData ) ;
                     //Add the marker to the map.
                     map.markers.add ( marker ) ;
                 }
+
             });
         }
 
